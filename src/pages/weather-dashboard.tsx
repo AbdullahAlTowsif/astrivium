@@ -3,6 +3,7 @@ import { HourlyTemperature } from "@/components/hourly-temparature";
 import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { WeatherDetails } from "@/components/weather-details";
 import { useGeolocation } from "@/hooks/use-geolocation";
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from "@/hooks/use-weather";
 import { AlertTriangle, MapPin, RefreshCw } from "lucide-react";
@@ -108,9 +109,9 @@ const WeatherDashboard = () => {
                     {/* hourly temperature */}
                     <HourlyTemperature data={forecastQuery.data} />
                 </div>
-                <div>
-                    {/* details */}
-                    {/* forecast */}
+                <div className="grid gap-6 md:grid-cols-2 items-start">
+                    <WeatherDetails data={weatherQuery.data} />
+                    
                 </div>
             </div>
         </div>
