@@ -1,4 +1,5 @@
 import { CurrentWeather } from "@/components/current-weather";
+import { HourlyTemperature } from "@/components/hourly-temparature";
 import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
@@ -101,10 +102,11 @@ const WeatherDashboard = () => {
             </div>
             {/* Current and Hourly Weather */}
             <div className="grid gap-6">
-                <div>
-                    <CurrentWeather data={weatherQuery.data} locationName={locationName} />
+                <div className="flex flex-col lg:flex-row gap-4">
                     {/* current weather */}
+                    <CurrentWeather data={weatherQuery.data} locationName={locationName} />
                     {/* hourly temperature */}
+                    <HourlyTemperature data={forecastQuery.data} />
                 </div>
                 <div>
                     {/* details */}
