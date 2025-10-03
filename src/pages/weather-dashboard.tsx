@@ -12,7 +12,7 @@ import { AlertTriangle, MapPin, RefreshCw } from "lucide-react";
 
 const WeatherDashboard = () => {
     const { coordinates, error: locationError, getLocation, isLoading: locationLoading } = useGeolocation();
-    console.log(coordinates);
+    // console.log(coordinates);
 
     const weatherQuery = useWeatherQuery(coordinates);
     // console.log("weatherQuery", weatherQuery.data);
