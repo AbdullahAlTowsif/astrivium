@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { useTheme } from "./theme-provider";
 import { ModeToggle } from "./mode-toggle";
+import { CitySearch } from "./city-search";
 
 const Header = () => {
     const { theme } = useTheme();
@@ -12,8 +13,9 @@ const Header = () => {
                     <img src={isDark ? "/logo.png" : "/logo2.png"} alt="Logo" className="h-14" />
                 </Link>
 
-                <div>
+                <div className="flex gap-4">
                     {/* search */}
+                    <CitySearch />
                     {/* theme toggle */}
                     <div>
                         <ModeToggle></ModeToggle>
