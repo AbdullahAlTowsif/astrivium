@@ -9,8 +9,9 @@ const Header = () => {
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur py-2 supports-[backdrop-filter]:bg-background/60">
             <div className="container mx-auto flex h-1/6 items-center justify-between px-4">
-                <Link to={"/"}>
+                <Link to={"/"} className="flex justify-center items-center">
                     <img src={isDark ? "/pg.jpeg" : "/Paradeguard.jpeg"} alt="Logo" className="h-14" />
+                    ParadeGuard
                 </Link>
 
                 <div className="flex gap-4">
